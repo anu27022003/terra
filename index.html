@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamika's Portfolio - Welcome!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f2f7; /* Light blue background - changed */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #007bff; /* Vibrant blue - changed */
+            color: #ffffff; /* White text */
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            margin: 0 0 10px;
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.8em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffc107; /* Yellow on hover - changed */
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            color: #007bff; /* Vibrant blue - changed */
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #ffc107; /* Yellow - changed */
+            border-radius: 2px;
+        }
+
+        #about p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            background-color: #e9ecef; /* Light gray - changed */
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background-color: #cce5ff; /* Lighter blue - changed */
+        }
+
+        .skill-item i {
+            font-size: 2.5em;
+            color: #007bff; /* Vibrant blue - changed */
+            margin-bottom: 10px;
+        }
+
+        .skill-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em;
+            color: #333;
+            margin: 10px 0 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            background-color: #007bff; /* Vibrant blue - changed */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3; /* Darker blue on hover - changed */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007bff; /* Vibrant blue - changed */
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* Simple Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .skill-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Hi, I'm Anamika!</h1>
+            <p>Passionate about [Your Field/Interests, e.g., Data Analysis, UX/UI Design, Creative Writing]</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>
+                Welcome to my corner of the internet! I'm Anamika, a [Your Profession/Student Status, e.g., data analyst, design student] with a keen interest in [Specific area 1] and [Specific area 2]. I love turning complex ideas into clear, actionable insights and creating intuitive, beautiful experiences. When I'm not immersed in my work, you can find me [Your hobby/interest, e.g., sketching, hiking, learning new languages].
+            </p>
+            <p id="dynamic-text">Click here to reveal a little more about my journey!</p>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>My Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Analysis</h3>
+                    <p>Python (Pandas), SQL, Excel</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>UX/UI Design</h3>
+                    <p>Figma, Adobe XD, Prototyping</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3>Content Creation</h3>
+                    <p>Copywriting, Blog Posts, Social Media</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Problem Solving</h3>
+                    <p>Critical Thinking, Research, Innovation</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Get In Touch</h2>
+            <p>Have a project in mind or just want to chat? Feel free to reach out!</p>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anamika. All rights reserved.</p>
+            <p>Built with ❤️ and creativity.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for a subtle interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const dynamicText = document.getElementById('dynamic-text');
+            let isExpanded = false;
+            const originalText = "Click here to reveal a little more about my journey!";
+            const expandedContent = "My journey into [Your Field] began when I discovered [how/what]. Since then, I've been fascinated by [specific aspect] and continuously strive to learn and grow. I believe in [your philosophy, e.g., telling data stories, user-centered design].";
+
+            dynamicText.style.cursor = 'pointer'; // Add pointer cursor
+            dynamicText.style.textDecoration = 'underline'; // Indicate it's clickable
+
+            dynamicText.addEventListener('click', () => {
+                if (!isExpanded) {
+                    dynamicText.textContent = expandedContent;
+                    isExpanded = true;
+                } else {
+                    dynamicText.textContent = originalText;
+                    isExpanded = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
